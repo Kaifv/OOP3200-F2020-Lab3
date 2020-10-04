@@ -24,12 +24,12 @@ private:
 
 public:
 	//// Constructor function:
-	//ExtendedWorkTicket() : isOpen(true){}
+	ExtendedWorkTicket() : isOpen(true){}
 	////ExtendedWorkTicket(bool Ticket_open);
 
-	//ExtendedWorkTicket(int ticket_number, const string& client_id, int month, int day, int year,
-	//                   const string& description,
-	//                   bool Ticket_open);
+	ExtendedWorkTicket(int ticket_number, const string& client_id, int month, int day, int year,
+	                   const string& description,
+	                   bool Ticket_open);
 	// Declaring a SetWorkTicket mutator, we will overload this function and will add one more parameter for isOpen.
 	bool SetWorkTicket(int ticket_number, const string& client_id, int day, int month, int year, const string& description, bool Ticket_open = true) ;
 
@@ -63,15 +63,15 @@ inline ostream& operator<<(ostream& out, const ExtendedWorkTicket& show)
 	return out;
 }
 
-//inline ExtendedWorkTicket::ExtendedWorkTicket( const int ticket_number, const string& client_id, const int month, const int day, const int year, const string& description, bool Ticket_open)
-//{
-//	SetTicketNumber(ticket_number);
-//	SetClientId(client_id);
-//	SetDescription(description);
-//	SetDate(day, month, year);
-//	SetOpen(Ticket_open);
-//	
-//}
+inline ExtendedWorkTicket::ExtendedWorkTicket( const int ticket_number, const string& client_id, const int month, const int day, const int year, const string& description, bool Ticket_open)
+{
+	SetTicketNumber(ticket_number);
+	SetClientId(client_id);
+	SetDescription(description);
+	SetDate(day, month, year);
+	SetOpen(Ticket_open);
+	
+}
 
 // Defining SetWorkTicket function which will decide the value to each of the attribute.
 inline bool ExtendedWorkTicket::SetWorkTicket(int ticket_number, const string& client_id, int day, int month, int year,
